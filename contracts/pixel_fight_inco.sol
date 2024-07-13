@@ -106,10 +106,6 @@ contract PixelFight {
         }
 
         game.roundMoves = 0;
-        game.player1MoveAttack = TFHE.asEuint8(0);
-        game.player1MoveBlock = TFHE.asEuint8(0);
-        game.player2MoveAttack = TFHE.asEuint8(0);
-        game.player2MoveBlock = TFHE.asEuint8(0);
         emit RoundEnded(_gameId, game.player1HP, game.player2HP);
 
         if (game.player1HP == 0 || game.player2HP == 0) {
